@@ -7,10 +7,9 @@ function GameBoard() {
   const characters = character_data;
 
   return (
-    <Grid container spacing={2}>
+    <Grid container spacing={4}>
       {characters.map((character) => (
-        // <Grid item key={character.id} xs={6} sm={4} md={3}>
-        <Grid item xs={3} sx={{ width: "100%", height: "100%" }}>
+        <Grid item xs={3} md={3} key={character.id} style={{ maxWidth: "160px" }}>
           <CharacterCard character={character} />
         </Grid>
       ))}
