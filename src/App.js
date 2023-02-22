@@ -1,4 +1,3 @@
-import './App.css';
 import React from "react";
 import GameBoard from "./components/GameBoard.jsx";
 
