@@ -15,3 +15,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Add a white border between character cards */
+.p-2 {
+  padding: 2px;
+}
+
+.ml-2 {
+  margin-left: 2px;
+}
+
