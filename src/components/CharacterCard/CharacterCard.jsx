@@ -4,12 +4,11 @@ import "./CharacterCard.css";
 function CharacterCard(props) {
   return (
     <div className="character-card">
-      <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+      <div>
         <img
           src={props.character.image}
           alt={props.character.name}
-          className="h-auto w-auto object-cover"
-          style={{ maxHeight: "12rem" }}
+          style={{ maxHeight: "8rem" }}
         />
       </div>
     </div>

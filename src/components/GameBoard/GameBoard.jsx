@@ -8,7 +8,7 @@ function GameBoard() {
   const characters = character_data;
 
   return (
-    <Grid container spacing={4} className="game-board">
+    <Grid container spacing={2} className="game-board">
       {characters.map((character) => (
         <Grid item key={character.id} className="game-board__card">
           <CharacterCard character={character} />
