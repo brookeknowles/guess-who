@@ -1,11 +1,11 @@
 .game-board {
-    display: flex;
-    justify-content: center;
+    margin-top: 32px;
 }
-
-@media (max-width: 600px) {
-    .game-board {
-        flex-direction: column;
-        align-items: center;
-    }
+  
+.game-board__card {
+    margin-right: 8px;
+}
+  
+.game-board__card:last-child {
+    margin-right: 0;
 }
