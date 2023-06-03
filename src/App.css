@@ -1,6 +1,6 @@
 body {
     background-color: lightblue;
-  }
+}
   
 
 .gameboard_container {
@@ -14,8 +14,4 @@ body {
     border: 10px solid red;
     border-radius: 16px;
     background-color: black;
-}
-
-.chat_container {
-    float: right;
 }

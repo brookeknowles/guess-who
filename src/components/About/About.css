@@ -1,0 +1,29 @@
+.guess-who-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.menu button {
+    margin: 5px;
+}
+
+.instructions,
+.chat {
+    margin-top: 20px;
+}
