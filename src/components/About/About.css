@@ -27,3 +27,19 @@
 .chat {
     margin-top: 20px;
 }
+
+.dropdown-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.dropdown-item {
+    margin: 0 5px;
+}
+
+.dropdown-item select,
+.dropdown-item button {
+    height: 40px;
+}

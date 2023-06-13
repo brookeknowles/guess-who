@@ -1,28 +1,70 @@
 .chat-container {
+    width: 600px;
+    height: 250px;
+    background-color: #f1f1f1;
+    overflow: hidden;
+    border-radius: 5px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    margin-top: 20px;
+    margin: 0 auto;
 }
 
 .chat-messages {
-    margin-bottom: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
 }
 
-.chat-message {
+
+.question {
+    background-color: #e8f4ff;
+    color: #333;
+    padding: 10px;
+    border-radius: 10px;
     margin-bottom: 10px;
+    align-self: flex-end;
+    text-align: right;
+    word-wrap: break-word;
+    margin-right: auto;
+    margin-left: 300px;
+    width: fit-content;
+}
+
+.answer {
+    background-color: #fff;
+    color: #333;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    align-self: flex-start;
+    text-align: left;
+    word-wrap: break-word;
+    margin-right: auto;
+    width: fit-content;
 }
 
 .chat-input {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 10px;
 }
 
-select {
+.dropdown-container {
+    display: flex;
+    align-items: center;
     margin-bottom: 10px;
 }
 
-button {
-    padding: 8px 16px;
+.dropdown-container select,
+.dropdown-container button {
+    height: 40px;
+    margin-right: 10px;
 }

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import computerAnswers from "../../data/computer_answers";
 import "./Chat.css";
 
-function Chat() {
+function Chat({ computerCharacter }) {
     const [chatMessages, setChatMessages] = useState([]);
     const [selectedQuestion, setSelectedQuestion] = useState("");
 
@@ -19,8 +19,18 @@ function Chat() {
     };
 
     const getComputerAnswer = (question) => {
-        const answer = computerAnswers[question] || "I don't know.";
-        return answer;
+        if (selectedQuestion && computerCharacter) {
+            const answerList = computerAnswers[question];
+            if (answerList) {
+                const characterName = computerCharacter.name;
+                if (answerList.yes.includes(characterName)) {
+                    return "Yes";
+                } else if (answerList.no.includes(characterName)) {
+                    return "No";
+                }
+            }
+        }
+        return "I don't know.";
     };
 
     return (
@@ -34,15 +44,24 @@ function Chat() {
                 ))}
             </div>
             <div className="chat-input">
-                <select value={selectedQuestion} onChange={handleQuestionChange}>
-                    <option value="">Select a question...</option>
-                    {Object.keys(computerAnswers).map((question, index) => (
-                        <option key={index} value={question}>
-                            {question}
-                        </option>
-                    ))}
-                </select>
-                <button onClick={handleAskClick}>Ask</button>
+                <div className="dropdown-container">
+                    <div className="dropdown-item">
+                        <select
+                            value={selectedQuestion}
+                            onChange={handleQuestionChange}
+                        >
+                            <option value="">Select a question...</option>
+                            {Object.keys(computerAnswers).map((question, index) => (
+                                <option key={index} value={question}>
+                                    {question}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+                    <div className="dropdown-item">
+                        <button onClick={handleAskClick}>Ask</button>
+                    </div>
+                </div>
             </div>
         </div>
     );

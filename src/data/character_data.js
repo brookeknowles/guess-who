@@ -1,5 +1,4 @@
 const characters = [
-  // TODO add the blue ones later
   { id: 1, name: "Adele", image: "/character_images/adele_red.png" },
   { id: 2, name: "Ariana Grande", image: "/character_images/ariana_grande_red.png" },
   { id: 3, name: "Bad Bunny", image: "/character_images/bad_bunny_red.png" },
@@ -16,7 +15,7 @@ const characters = [
   { id: 14, name: "Justin Timberlake", image: "/character_images/justin_timberlake_red.png" },
   { id: 15, name: "Katy Perry", image: "/character_images/katy_perry_red.png" },
   { id: 16, name: "Lady Gaga", image: "/character_images/lady_gaga_red.png" },
-  { id: 17, name: "MGK", image: "/character_images/mgk_red.png" },
+  { id: 17, name: "Machine Gun Kelly", image: "/character_images/mgk_red.png" },
   { id: 18, name: "Miley Cyrus", image: "/character_images/miley_cyrus_red.png" },
   { id: 19, name: "Nick Jonas", image: "/character_images/nick_jonas_red.png" },
   { id: 20, name: "Rihanna", image: "/character_images/rihanna_red.png" },
@@ -25,5 +24,5 @@ const characters = [
   { id: 23, name: "The Weeknd", image: "/character_images/the_weeknd_red.png" },
   { id: 24, name: "Zayn", image: "/character_images/zayn_red.png" }
 ]
-  
+
 export default characters
