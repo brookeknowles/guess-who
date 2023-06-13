@@ -50,7 +50,9 @@ function About() {
             />
             <div className="menu">
                 <button onClick={handleInstructionsClick}>Instructions</button>
-                <button onClick={handlePlayComputerClick}>Play</button>
+                {!gameResult && (
+                    <button onClick={handlePlayComputerClick}>Play</button>
+                )}
             </div>
             {showInstructions && (
                 <div className="instructions">
@@ -61,8 +63,8 @@ function About() {
             {showChat && (
                 <div className="game-container">
                     <Chat computerCharacter={computerCharacter} />
-                    <div className="dropdown-container">
-                        <div className="dropdown-item">
+                    {!gameResult && (
+                        <div className="dropdown-container">
                             <select
                                 value={selectedCharacter && selectedCharacter.id}
                                 onChange={handleCharacterSelect}
@@ -74,11 +76,9 @@ function About() {
                                     </option>
                                 ))}
                             </select>
-                        </div>
-                        <div className="dropdown-item">
                             <button onClick={handleGuessClick}>Guess</button>
                         </div>
-                    </div>
+                    )}
                     {gameResult === "win" && (
                         <p className="result">Congratulations! You win!</p>
                     )}

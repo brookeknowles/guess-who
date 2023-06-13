@@ -43,3 +43,9 @@
 .dropdown-item button {
     height: 40px;
 }
+
+.result {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
