@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import computerAnswers from "../../data/computer_answers";
 import "./Chat.css";
 
-function Chat({ computerCharacter }) {
+function Chat({ computerCharacter, questionCount, setQuestionCount }) {
     const [chatMessages, setChatMessages] = useState([]);
     const [selectedQuestion, setSelectedQuestion] = useState("");
     const chatContainerRef = useRef(null);
@@ -20,6 +20,7 @@ function Chat({ computerCharacter }) {
             const answer = getComputerAnswer(selectedQuestion);
             const newChatMessage = { question: selectedQuestion, answer };
             setChatMessages([...chatMessages, newChatMessage]);
+            setQuestionCount((prevCount) => prevCount + 1); // Increment the question count
         }
     };
 
@@ -44,6 +45,7 @@ function Chat({ computerCharacter }) {
 
     return (
         <div className="chat-container">
+            <div className="question-count">Question Count: {questionCount}</div> {/* Display question count */}
             <div className="chat-messages" ref={chatContainerRef}>
                 {chatMessages.map((message, index) => (
                     <div key={index} className="chat-message">

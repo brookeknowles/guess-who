@@ -10,6 +10,7 @@ function About() {
     const [computerCharacter, setComputerCharacter] = useState(null);
     const [selectedCharacter, setSelectedCharacter] = useState(null);
     const [gameResult, setGameResult] = useState(null);
+    const [questionCount, setQuestionCount] = useState(0); // Add questionCount state
 
     const handleInstructionsClick = () => {
         setShowInstructions(true);
@@ -62,7 +63,11 @@ function About() {
             )}
             {showChat && (
                 <div className="game-container">
-                    <Chat computerCharacter={computerCharacter} />
+                    <Chat
+                        computerCharacter={computerCharacter}
+                        questionCount={questionCount} // Pass questionCount as a prop
+                        setQuestionCount={setQuestionCount} // Pass setQuestionCount as a prop
+                    />
                     {!gameResult && (
                         <div className="dropdown-container">
                             <select
