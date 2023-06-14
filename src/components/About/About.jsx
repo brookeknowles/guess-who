@@ -8,8 +8,9 @@ function About() {
     const [showInstructions, setShowInstructions] = useState(false);
     const [showChat, setShowChat] = useState(false);
     const [computerCharacter, setComputerCharacter] = useState(null);
-    const [selectedCharacter, setSelectedCharacter] = useState("");
+    const [selectedCharacter, setSelectedCharacter] = useState(null);
     const [gameResult, setGameResult] = useState(null);
+    const [questionCount, setQuestionCount] = useState(0); // Add questionCount state
 
     const handleInstructionsClick = () => {
         setShowInstructions(true);
@@ -36,10 +37,15 @@ function About() {
     };
 
     const getFilteredCharacters = () => {
-        return characters.filter((character) =>
-            character.name.toLowerCase().includes(selectedCharacter.toLowerCase())
-        );
+        if (selectedCharacter) {
+            return characters.filter((character) =>
+                character.name.toLowerCase().includes(selectedCharacter.toLowerCase())
+            );
+        } else {
+            return characters;
+        }
     };
+
 
     return (
         <div>
@@ -62,15 +68,19 @@ function About() {
             )}
             {showChat && (
                 <div className="game-container">
-                    <Chat computerCharacter={computerCharacter} />
+                    <Chat
+                        computerCharacter={computerCharacter}
+                        questionCount={questionCount} // Pass questionCount to Chat component
+                        setQuestionCount={setQuestionCount} // Pass setQuestionCount to Chat component
+                    />
                     {!gameResult && (
                         <div className="dropdown-container">
                             <input
                                 type="text"
                                 list="characterOptions"
                                 value={selectedCharacter}
-                                placeholder="Search for a character..."
                                 onChange={(e) => setSelectedCharacter(e.target.value)}
+                                placeholder="Search for a character..."
                             />
                             <datalist id="characterOptions">
                                 {getFilteredCharacters().map((character, index) => (
