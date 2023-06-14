@@ -62,8 +62,14 @@ function About() {
             </div>
             {showInstructions && (
                 <div className="instructions">
-                    <h2>Instructions</h2>
-                    <p>Simple instructions on how to play the game.</p>
+                    <h2 className="instructions-heading">Instructions</h2>
+                    <p className="instructions-paragraph">
+                        Once you click play, the computer will randomly select a celebrity which you will have to guess.
+                        A chat box will pop up where you can search for a yes/no question to ask the computer. As you
+                        rule out characters who don't fit with the answers to the yes/no questions, you can turn them
+                        over by clicking on their corresponding card in the game board to the left. Once you think you
+                        have solved the mystery, select/search for the character from the drop down and click Guess.
+                    </p>
                 </div>
             )}
             {showChat && (

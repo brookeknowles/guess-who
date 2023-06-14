@@ -45,6 +45,19 @@ const computerAnswers = {
             "Ariana Grande", "Lady Gaga", "Taylor Swift", "Bruno Mars", "Doja Cat", "Bad Bunny", "Justin Bieber",
             "Shawn Mendes", "The Weeknd", "Dua Lipa"]
     },
+    "Have they ever won a Grammy award?": {
+        yes: ["Justin Timberlake", "Britney Spears", "Beyonce", "Drake", "Ed Sheeran", "Adele", "Rihanna",
+            "Ariana Grande", "Lady Gaga", "Taylor Swift", "Bruno Mars", "Doja Cat", "Bad Bunny", "Justin Bieber",
+            "The Weeknd", "Dua Lipa"],
+        no: ["Joe Jonas", "Nick Jonas", "Miley Cyrus", "Demi Lovato", "Zayn", "Machine Gun Kelly", "Katy Perry",
+            "Demi Lovato", "Shawn Mendes"]
+    },
+    "Do they have an NZ #1 single?": {
+        yes: ["Adele", "Ariana Grande", "Beyonce", "Britney Spears", "Bruno Mars", "Doja Cat", "Drake", "Dua Lipa",
+            "Ed Sheeran", "Joe Jonas", "Justin Bieber", "Justin Timberlake", "Katy Perry", "Lady Gaga", "Miley Cyrus",
+            "Nick Jonas", "Rihanna", "Shawn Mendes", "Taylor Swift", "The Weeknd", "Zayn"],
+        no: ["Bad Bunny", "Demi Lovato", "Machine Gun Kelly"]
+    }
 };
 
 export default computerAnswers;
