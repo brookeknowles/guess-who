@@ -24,6 +24,12 @@ function Chat({ computerCharacter, questionCount, setQuestionCount }) {
         }
     };
 
+    const getFilteredQuestions = () => {
+        return Object.keys(computerAnswers).filter((question) =>
+            question.toLowerCase().includes(selectedQuestion.toLowerCase())
+        );
+    };
+
     const getComputerAnswer = (question) => {
         if (selectedQuestion && computerCharacter) {
             const answerList = computerAnswers[question];
@@ -56,14 +62,18 @@ function Chat({ computerCharacter, questionCount, setQuestionCount }) {
             </div>
             <div className="chat-input">
                 <div className="dropdown-container">
-                    <select value={selectedQuestion} onChange={handleQuestionChange}>
-                        <option value="">Select a question...</option>
-                        {Object.keys(computerAnswers).map((question, index) => (
-                            <option key={index} value={question}>
-                                {question}
-                            </option>
+                    <input
+                        type="text"
+                        list="questionOptions"
+                        value={selectedQuestion}
+                        onChange={handleQuestionChange}
+                        placeholder="Search for a question..."
+                    />
+                    <datalist id="questionOptions">
+                        {getFilteredQuestions().map((question, index) => (
+                            <option key={index} value={question} />
                         ))}
-                    </select>
+                    </datalist>
                     <button onClick={handleAskClick}>Ask</button>
                 </div>
             </div>

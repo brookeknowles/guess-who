@@ -22,7 +22,6 @@
     width: 80%;
 }
 
-
 .question {
     background-color: #e8f4ff;
     color: #333;
@@ -67,4 +66,11 @@
 .dropdown-container button {
     height: 40px;
     margin-right: 10px;
+}
+
+.dropdown-container input {
+    width: 400px;
+    height: 25px;
+    padding: 5px;
+    font-size: 14px;
 }

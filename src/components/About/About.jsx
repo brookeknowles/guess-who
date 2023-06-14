@@ -8,9 +8,8 @@ function About() {
     const [showInstructions, setShowInstructions] = useState(false);
     const [showChat, setShowChat] = useState(false);
     const [computerCharacter, setComputerCharacter] = useState(null);
-    const [selectedCharacter, setSelectedCharacter] = useState(null);
+    const [selectedCharacter, setSelectedCharacter] = useState("");
     const [gameResult, setGameResult] = useState(null);
-    const [questionCount, setQuestionCount] = useState(0); // Add questionCount state
 
     const handleInstructionsClick = () => {
         setShowInstructions(true);
@@ -36,10 +35,10 @@ function About() {
         }
     };
 
-    const handleCharacterSelect = (event) => {
-        const selectedId = parseInt(event.target.value);
-        const character = characters.find((char) => char.id === selectedId);
-        setSelectedCharacter(character);
+    const getFilteredCharacters = () => {
+        return characters.filter((character) =>
+            character.name.toLowerCase().includes(selectedCharacter.toLowerCase())
+        );
     };
 
     return (
@@ -63,24 +62,21 @@ function About() {
             )}
             {showChat && (
                 <div className="game-container">
-                    <Chat
-                        computerCharacter={computerCharacter}
-                        questionCount={questionCount} // Pass questionCount as a prop
-                        setQuestionCount={setQuestionCount} // Pass setQuestionCount as a prop
-                    />
+                    <Chat computerCharacter={computerCharacter} />
                     {!gameResult && (
                         <div className="dropdown-container">
-                            <select
-                                value={selectedCharacter && selectedCharacter.id}
-                                onChange={handleCharacterSelect}
-                            >
-                                <option value="">Select a character</option>
-                                {characters.map((character) => (
-                                    <option key={character.id} value={character.id}>
-                                        {character.name}
-                                    </option>
+                            <input
+                                type="text"
+                                list="characterOptions"
+                                value={selectedCharacter}
+                                placeholder="Search for a character..."
+                                onChange={(e) => setSelectedCharacter(e.target.value)}
+                            />
+                            <datalist id="characterOptions">
+                                {getFilteredCharacters().map((character, index) => (
+                                    <option key={index} value={character.name} />
                                 ))}
-                            </select>
+                            </datalist>
                             <button onClick={handleGuessClick}>Guess</button>
                         </div>
                     )}
