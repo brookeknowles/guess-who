@@ -11,6 +11,7 @@ function About() {
     const [selectedCharacter, setSelectedCharacter] = useState(null);
     const [gameResult, setGameResult] = useState(null);
     const [questionCount, setQuestionCount] = useState(0);
+    const [isGameReset, setIsGameReset] = useState(false); 
 
     const handleInstructionsClick = () => {
         setShowInstructions(true);
@@ -24,6 +25,7 @@ function About() {
         setSelectedCharacter(null);
         setGameResult(null);
         setQuestionCount(0);
+        setIsGameReset(true);
 
         const event = new Event("resetCardFlip");
         document.dispatchEvent(event);
@@ -32,6 +34,10 @@ function About() {
         const character = characters[randomIndex];
         setComputerCharacter(character);
         console.log("Computer Character:", character);
+    };
+
+    const resetChat = () => {
+        setIsGameReset(false);
     };
     
     
@@ -88,6 +94,8 @@ function About() {
                         computerCharacter={computerCharacter}
                         questionCount={questionCount}
                         setQuestionCount={setQuestionCount}
+                        isGameReset={isGameReset}
+                        resetChat={resetChat}
                     />
                     {!gameResult && (
                         <div className="dropdown-container">

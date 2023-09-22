@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import computerAnswers from "../../data/computer_answers";
 import "./Chat.css";
 
-function Chat({ computerCharacter, questionCount, setQuestionCount }) {
+function Chat({ computerCharacter, questionCount, setQuestionCount, isGameReset, resetChat }) {
     const [chatMessages, setChatMessages] = useState([]);
     const [selectedQuestion, setSelectedQuestion] = useState("");
     const chatContainerRef = useRef(null);
@@ -10,6 +10,14 @@ function Chat({ computerCharacter, questionCount, setQuestionCount }) {
     useEffect(() => {
         scrollToBottom();
     }, [chatMessages]);
+
+    useEffect(() => {
+        if (isGameReset) {
+            setChatMessages([]);
+            resetChat();
+            setSelectedQuestion("");
+        }
+    }, [isGameReset, resetChat]);
 
     const handleQuestionChange = (event) => {
         setSelectedQuestion(event.target.value);
@@ -21,6 +29,7 @@ function Chat({ computerCharacter, questionCount, setQuestionCount }) {
             const newChatMessage = { question: selectedQuestion, answer };
             setChatMessages([...chatMessages, newChatMessage]);
             setQuestionCount((prevCount) => prevCount + 1);
+            setSelectedQuestion("");
         }
     };
 
