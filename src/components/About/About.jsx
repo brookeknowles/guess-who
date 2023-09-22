@@ -66,7 +66,7 @@ function About() {
         <div>
             <img
                 className="guess-who-logo"
-                src="/Guess_Who_Logo.svg"
+                src="Guess_Who_Logo.svg"
                 alt="Guess Who Logo"
             />
             <div className="menu">
