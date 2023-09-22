@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "bb900b6649168bf9ac8b",
+    "revision": "fa2109d753c0a00c56a4",
     "url": "/guess-who/static/css/main.49129aa4.chunk.css"
   },
   {
-    "revision": "bb900b6649168bf9ac8b",
-    "url": "/guess-who/static/js/main.bb900b66.chunk.js"
+    "revision": "fa2109d753c0a00c56a4",
+    "url": "/guess-who/static/js/main.fa2109d7.chunk.js"
   },
   {
     "revision": "9a53afc1bdedb8c2f4c8",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/guess-who/static/js/runtime~main.54d5c85b.js"
   },
   {
-    "revision": "c15d025245f3a3898cb35a3f9c4b582d",
+    "revision": "f74849007ad9a36efc0146981e2e29be",
     "url": "/guess-who/index.html"
   }
 ];
