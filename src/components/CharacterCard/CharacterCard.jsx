@@ -23,7 +23,7 @@ function CharacterCard(props) {
         <div className="character-card" onClick={handleClick}>
             <div>
                 <img
-                    src={isFlipped ? "/blank_cards/red_blank.png" : props.character.image}
+                    src={isFlipped ? "blank_cards/red_blank.png" : props.character.image}
                     alt={props.character.name}
                     style={{ maxHeight: "8rem" }}
                 />
