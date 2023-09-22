@@ -2,6 +2,8 @@
 
 Online celebrity themed Guess Who game made with React. A user can play against the computer to guess a celebrity, asking yes or no questions and turning over cards as they rule each character out. 
 
+![](guess-who-example.gif)
+
 ---
 ### 🏃 Running app
 1. Clone the repo: `git clone https://github.com/brookeknowles/guess-who.git`
