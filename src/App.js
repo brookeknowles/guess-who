@@ -9,7 +9,7 @@ function App() {
       <div className="gameboard_container">
         <GameBoard />
       </div>
-      <div className="about_container"> {/* TODO maybe change so its Left/Right containers instead*/}
+      <div className="about_container">
         <About />
       </div>
     </div>

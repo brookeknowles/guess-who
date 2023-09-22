@@ -20,7 +20,7 @@ function Chat({ computerCharacter, questionCount, setQuestionCount }) {
             const answer = getComputerAnswer(selectedQuestion);
             const newChatMessage = { question: selectedQuestion, answer };
             setChatMessages([...chatMessages, newChatMessage]);
-            setQuestionCount((prevCount) => prevCount + 1); // Increment the question count
+            setQuestionCount((prevCount) => prevCount + 1);
         }
     };
 
@@ -51,7 +51,7 @@ function Chat({ computerCharacter, questionCount, setQuestionCount }) {
 
     return (
         <div className="chat-container">
-            <div className="question-count">Question Count: {questionCount}</div> {/* Display question count */}
+            <div className="question-count">Question Count: {questionCount}</div>
             <div className="chat-messages" ref={chatContainerRef}>
                 {chatMessages.map((message, index) => (
                     <div key={index} className="chat-message">

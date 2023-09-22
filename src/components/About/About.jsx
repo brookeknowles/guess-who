@@ -10,7 +10,7 @@ function About() {
     const [computerCharacter, setComputerCharacter] = useState(null);
     const [selectedCharacter, setSelectedCharacter] = useState(null);
     const [gameResult, setGameResult] = useState(null);
-    const [questionCount, setQuestionCount] = useState(0); // Add questionCount state
+    const [questionCount, setQuestionCount] = useState(0);
 
     const handleInstructionsClick = () => {
         setShowInstructions(true);
@@ -20,15 +20,24 @@ function About() {
     const handlePlayComputerClick = () => {
         setShowInstructions(false);
         setShowChat(true);
+        setComputerCharacter(null);
+        setSelectedCharacter(null);
+        setGameResult(null);
+        setQuestionCount(0);
+
+        const event = new Event("resetCardFlip");
+        document.dispatchEvent(event);
+
         const randomIndex = Math.floor(Math.random() * characters.length);
         const character = characters[randomIndex];
         setComputerCharacter(character);
         console.log("Computer Character:", character);
     };
-
+    
+    
     const handleGuessClick = () => {
         if (selectedCharacter && computerCharacter) {
-            if (selectedCharacter.id === computerCharacter.id) {
+            if (selectedCharacter === computerCharacter.name) {
                 setGameResult("win");
             } else {
                 setGameResult("lose");
@@ -56,9 +65,10 @@ function About() {
             />
             <div className="menu">
                 <button onClick={handleInstructionsClick}>Instructions</button>
-                {!gameResult && (
+                {(!gameResult || gameResult === "win" || gameResult === "lose") && (
                     <button onClick={handlePlayComputerClick}>Play</button>
                 )}
+
             </div>
             {showInstructions && (
                 <div className="instructions">
@@ -76,8 +86,8 @@ function About() {
                 <div className="game-container">
                     <Chat
                         computerCharacter={computerCharacter}
-                        questionCount={questionCount} // Pass questionCount to Chat component
-                        setQuestionCount={setQuestionCount} // Pass setQuestionCount to Chat component
+                        questionCount={questionCount}
+                        setQuestionCount={setQuestionCount}
                     />
                     {!gameResult && (
                         <div className="dropdown-container">
