@@ -140,7 +140,7 @@ const computerAnswers = {
     ],
   },
   "Is the character known as a rapper?": {
-    yes: ["Bad Bunny", "Drake", "Machine Gun Kelly"],
+    yes: ["Bad Bunny", "Drake", "Machine Gun Kelly", "Doja Cat"],
     no: [
       "Bruno Mars",
       "Joe Jonas",
@@ -151,7 +151,6 @@ const computerAnswers = {
       "Beyonce",
       "Britney Spears",
       "Demi Lovato",
-      "Doja Cat",
       "Katy Perry",
       "Lady Gaga",
       "Miley Cyrus",
