@@ -20,6 +20,25 @@ const computerAnswers = {
         no: ["Bad Bunny", "Drake", "Ed Sheeran", "Justin Bieber", "Shawn Mendes", "The Weeknd", "Zayn", "Adele",
             "Dua Lipa", "Rihanna"]
     },
+    "Is the character British?": {
+        yes: ["Zayn", "Adele", "Dua Lipa", "Ed Sheeran"],
+        no: ["Bad Bunny", "Bruno Mars", "Drake", "Joe Jonas", "Justin Bieber", "Justin Timberlake", 
+        "Machine Gun Kelly", "Nick Jonas", "Shawn Mendes", "The Weeknd", "Ariana Grande", "Beyonce", 
+        "Britney Spears", "Demi Lovato", "Doja Cat", "Katy Perry", "Lady Gaga", "Miley Cyrus", "Rihanna", "Taylor Swift"]
+    },
+    "Is the character Canadian?": {
+        yes: ["Drake", "Justin Bieber", "Shawn Mendes", "The Weeknd"],
+        no: ["Bad Bunny", "Bruno Mars", "Joe Jonas", "Justin Timberlake", "Machine Gun Kelly", "Nick Jonas",
+            "Ariana Grande", "Beyonce", "Britney Spears", "Demi Lovato", "Doja Cat", "Katy Perry",
+            "Lady Gaga", "Miley Cyrus", "Taylor Swift", "Zayn", "Adele", "Dua Lipa", "Ed Sheeran", "Rihanna", 
+        ]
+    },
+    "Is the character known as a rapper?": {
+        yes: ["Bad Bunny", "Drake", "Machine Gun Kelly"],
+        no: ["Bruno Mars", "Joe Jonas", "Justin Bieber", "Justin Timberlake", "Nick Jonas",
+            "Ariana Grande", "Beyonce", "Britney Spears", "Demi Lovato", "Doja Cat", "Katy Perry",
+            "Lady Gaga", "Miley Cyrus", "Taylor Swift", "Shawn Mendes", "The Weeknd", "Zayn", "Adele", "Dua Lipa", "Ed Sheeran", "Rihanna"]
+    },
     "Is the character married?": {
         yes: ["Joe Jonas", "Justin Timberlake", "Nick Jonas", "Ariana Grande", "Beyonce", "Ed Sheeran", "Justin Bieber",
             "Britney Spears"],
