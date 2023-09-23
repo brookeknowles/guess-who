@@ -1,67 +1,67 @@
 .guess-who-logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
 }
 
 .about-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .menu {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding-bottom: 20px;
 }
 
 .menu button {
-    font-weight: bold;
-    color: #fff;
-    margin: 5px;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    background-color: red;
+  font-weight: bold;
+  color: #fff;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: red;
 }
 
 .menu button:hover {
-    background-color: blue;
+  background-color: blue;
 }
 
 .instructions {
-    text-align: center;
-    justify-content: center;
+  text-align: center;
+  justify-content: center;
 }
 
 .chat {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .dropdown-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .dropdown-item {
-    margin: 0 5px;
+  margin: 0 5px;
 }
 
 .dropdown-item select,
 .dropdown-item button {
-    height: 40px;
+  height: 40px;
 }
 
 .result {
-    text-align: center;
-    font-weight: bold;
-    margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
 }
