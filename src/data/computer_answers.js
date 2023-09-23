@@ -336,6 +336,36 @@ const computerAnswers = {
     ],
     no: ["Bad Bunny", "Demi Lovato", "Machine Gun Kelly"],
   },
+  "Have they ever headlined the Super Bowl halftime show?": {
+    yes: [
+      "Justin Timberlake",
+      "Beyonce",
+      "Lady Gaga",
+      "Bruno Mars",
+      "Katy Perry",
+      "The Weeknd",
+      "Rihanna",
+    ],
+    no: [
+      "Adele",
+      "Ariana Grande",
+      "Britney Spears",
+      "Doja Cat",
+      "Drake",
+      "Dua Lipa",
+      "Ed Sheeran",
+      "Joe Jonas",
+      "Justin Bieber",
+      "Miley Cyrus",
+      "Nick Jonas",
+      "Shawn Mendes",
+      "Taylor Swift",
+      "Zayn",
+      "Bad Bunny",
+      "Demi Lovato",
+      "Machine Gun Kelly",
+    ],
+  },
 };
 
 export default computerAnswers;
